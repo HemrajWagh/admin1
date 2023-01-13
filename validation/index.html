@@ -1,0 +1,216 @@
+<?php
+session_start();
+$allErrs = $nameErr = $emailErr = $contactnoErr = $cityErr = $locationErr = $dobErr = $statusErr = $occupationErr = $companynameErr = $typeofcompanyErr = $interestedinbuyingErr = $typeofbuyerErr = $typeofflatErr = $approxbudgetErr = $enquirysourceErr = $existingclientnameErr =$clusterErr = $towerErr =$flatnoErr = $channelsubsourceErr  = $exceutivenameErr = $exceutivenumberErr =$referralnameErr = $referralmobileErr = $referralotpErr = $referralprojectnameErr =$referralbuildingnameErr =$referralflatnoErr =$digitalsubsourceErr = $otpErr = $allpostval = $enquirysource = $allapproxbudget1 = $alltypeofflat1 = $salesErr = $remarksErr = $purposeErr = $purposeOfInvestmentErr = $projectErr = $addressErr = $salesperson = "" ;
+
+if(isset($_SESSION['errors'])){
+  $allErrs = $_SESSION['errors'];
+}
+if(isset($_SESSION['postval'])){
+  $allpostval =$_SESSION['postval'];
+}
+
+if(isset($_SESSION['approxbudget1'])){
+  $allapproxbudget1 =$_SESSION['approxbudget1'];
+}
+
+if(isset($_SESSION['typeofflat1'])){
+  $alltypeofflat1 =$_SESSION['typeofflat1'];
+}
+
+if(isset($allpostval['enquirysource'])){
+  $enquirysource=$allpostval['enquirysource'];
+
+}
+
+if (isset($allErrs['project'])) {
+  $projectErr = $allErrs['project'];
+}
+
+if(isset($allErrs['name'])){
+  $nameErr = $allErrs['name'];
+}
+
+if(isset($allErrs['purposeOfInvestment'])){
+  $purposeOfInvestmentErr = $allErrs['purposeOfInvestment'];
+}
+
+if (isset($allErrs['salesperson'])) {
+  $salesErr = $allErrs['salesperson'];
+}
+
+if (isset($allErrs['dob'])) {
+  $dobErr = $allErrs['dob'];
+}
+
+if(isset($allErrs['remarks'])){
+  $remarksErr = $allErrs['remarks'];
+}
+
+if(isset($allErrs['existingclientname'])){
+  $existingclientnameErr = $allErrs['existingclientname'];
+}
+if(isset($allErrs['cluster'])){
+  $clusterErr = $allErrs['cluster'];
+}
+if(isset($allErrs['tower'])){
+  $towerErr = $allErrs['tower'];
+}
+if(isset($allErrs['flatno'])){
+  $flatnoErr = $allErrs['flatno'];
+}
+if(isset($allErrs['address'])){
+  $addressErr = $allErrs['address'];
+}
+if(isset($allErrs['typeofcompany'])){
+  $typeofcompanyErr = $allErrs['typeofcompany'];
+}
+
+
+
+if(isset($allErrs['channelsubsource'])){
+  $channelsubsourceErr = $allErrs['channelsubsource'];
+}
+if(isset($allErrs['exceutivename'])){
+  $exceutivenameErr = $allErrs['exceutivename'];
+}
+if(isset($allErrs['exceutivenumber'])){
+  $exceutivenumberErr = $allErrs['exceutivenumber'];
+}
+
+
+
+
+
+if(isset($allErrs['referralname'])){
+  $referralnameErr = $allErrs['referralname'];
+}
+if(isset($allErrs['referralprojectname'])){
+  $referralprojectnameErr = $allErrs['referralprojectname'];
+}
+if(isset($allErrs['referralbuildingname'])){
+  $referralbuildingnameErr = $allErrs['referralbuildingname'];
+}
+if(isset($allErrs['referralflatno'])){
+  $referralflatnoErr = $allErrs['referralflatno'];
+}
+if(isset($allErrs['referralmobile'])){
+  $referralmobileErr = $allErrs['referralmobile'];
+}
+if(isset($allErrs['referralotp'])){
+  $referralotpErr = $allErrs['referralotp'];
+}
+
+
+if(isset($allErrs['digitalsubsource'])){
+  $digitalsubsourceErr = $allErrs['digitalsubsource'];
+}
+
+
+if(isset($allErrs['email'])){
+  $emailErr = $allErrs['email'];
+}
+if(isset($allErrs['contactno'])){
+  $contactnoErr = $allErrs['contactno'];
+}
+if(isset($allErrs['city'])){
+  $cityErr = $allErrs['city'];
+}
+if(isset($allErrs['location'])){
+  $locationErr = $allErrs['location'];
+}
+
+if(isset($allErrs['enquirysource'])){
+  $enquirysourceErr = $allErrs['enquirysource'];
+}
+
+if(isset($allErrs['occupation'])){
+  $occupationErr = $allErrs['occupation'];
+}
+if(isset($allErrs['companyname'])){
+  $companynameErr = $allErrs['companyname'];
+}
+
+if(isset($allErrs['interestedinbuying'])){
+  $interestedinbuyingErr = $allErrs['interestedinbuying'];
+}
+if(isset($allErrs['typeofbuyer'])){
+  $typeofbuyerErr = $allErrs['typeofbuyer'];
+}
+if(isset($allErrs['typeofflat'])){
+  $typeofflatErr = $allErrs['typeofflat'];
+}
+if(isset($allErrs['approxbudget'])){
+  $approxbudgetErr = $allErrs['approxbudget'];
+}
+
+if(isset($allErrs['otp'])){
+  $otpErr = $allErrs['otp'];
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <div class="container">
+    <form method="post" action="send.php" onsubmit="document.getElementById('post-lead').disabled = 1;">
+      <i class="fas fa-paper-plane"></i>
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your name" id="contact_name" onkeyup="validatName()" >
+        <span id="name_error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Phone No.</label>
+        <input type="tel" name="phone" placeholder="123 456 7890" id="contact_phone" onkeyup="validatPhone()">
+        <span id="phone_error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" name="email" placeholder="Enter Email" id="contact_email" onkeyup="validatEmail()">
+        <span id="email_error"></span>
+      </div>   
+
+      <!-- <div class="input-group">
+        <label>Services</label>
+        <textarea rows="5" name="service"  placeholder="Choose your services" id="contact_massage" onkeyup="validatMassage()"></textarea>
+        <span id="massage_error"></span>
+      </div> -->
+
+      <div class="input-group">
+        <label>Services</label>
+        <select name="pid" id="pid">
+          <option value="527663903571816620">Trademark</option>
+          <option value="570166517982839433">Copyright</option>
+          <option value="621664737826839425">Patent</option>
+          <option value="560338377402839217">Company Formation</option>
+          <option value="527664231125816273">ISO</option>
+          <option value="529050893144816332">Website Design</option>  
+        </select> 
+        <!-- <span class="error">This field is required</span>                        -->
+        <span class="text-danger"><?php echo $projectErr; ?></span>
+      </div> 
+
+      <div class="input-group">
+        <label>City</label>
+        <input type="text" name="name" placeholder="Enter your name" id="contact_name" onkeyup="validatName()" >
+        <span id="name_error"></span>
+      </div>
+
+    <button>Submit</button>
+    <span id="submit-error" id="contact_submit" onkeyup="validatSubmit()"></span>
+   
+  </form>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

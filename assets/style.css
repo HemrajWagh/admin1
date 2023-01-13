@@ -1,0 +1,28 @@
+.btnNw {
+    display: inline-block;
+    min-width: 150px;
+    text-align: center;
+    color: #e74c3c;
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 0.8125rem;
+    border-radius: 0px;
+    margin-top: 20px;
+    transition: .5s;
+    border: 1px solid #e74c3c;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    padding: 0.8rem 3rem;
+    transition: all 0.6s;
+    border-radius: 2px;
+    background: #CAD5E2;
+}
+.btn-lg {
+    padding: 1rem 1rem;
+}
+.shadowbtn {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.35)!important;
+}
+.txtshadow {
+    text-shadow: 0px 3px 12px #7e7e77;
+}
